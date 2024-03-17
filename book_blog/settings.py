@@ -29,6 +29,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # TrustedApps
+    'rest_framework',
+    'django_filters',
+    'rest_framework_simplejwt',
+
+    # My Apss
+    'book_browser_app.apps.BookBrowserAppConfig',
+    'users.apps.UsersConfig',
+
+    # Third-party Apps
 ]
 
 MIDDLEWARE = [
