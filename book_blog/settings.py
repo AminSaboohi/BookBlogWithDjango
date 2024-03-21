@@ -37,7 +37,6 @@ INSTALLED_APPS = [
 
     # My Apss
     'book_browser_app.apps.BookBrowserAppConfig',
-    'users.apps.UsersConfig',
 
     # Third-party Apps
 ]
@@ -116,6 +115,8 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+LOGIN_REDIRECT_URL = 'url_validator'
+LOGOUT_REDIRECT_URL = 'url_validator'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 

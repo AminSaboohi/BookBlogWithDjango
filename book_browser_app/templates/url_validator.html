@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+    {% if user.is_authenticated %}
+        <style>
+            h1 {
+              text-align: Left;
+            }
+
+            h2 {
+              text-align: left;
+            }
+        </style>
+        <head>
+            <title>URL Validator</title>
+        </head>
+        <body>
+            <h1>URL Validator</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Submit</button>
+            </form>
+        </body>
+    {% else %}
+    <style>
+        h1 {
+          text-align: center;
+        }
+
+        h2 {
+          text-align: center;
+        }
+    </style>
+    <h1>Welcome To Article Browser Website</h1>
+    <br/>
+    <h2>Please Login OR Register To Enjoy</h2>
+    {% endif %}
+</html>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Validated URLs</title>
+        </head>
+        <body>
+            <h1>Validated URLs</h1>
+            <ul>
+                {% for url in validated_urls %}
+                    <li>{{ url }}</li>
+                {% empty %}
+                    <li>No validated URLs yet.</li>
+                {% endfor %}
+            </ul>
+            <a href="{% url 'index' %}">Back to validation</a>
+        </body>
+    </html>
+{% endblock %}

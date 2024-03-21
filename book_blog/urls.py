@@ -16,11 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.conf.urls.static import static
 from django.conf import settings
 
 
 urlpatterns = [
     path(f'{settings.ADMIN_PATH}', admin.site.urls),
+    path('', include('book_browser_app.urls')),
+    path('', include('django.contrib.auth.urls')),
 ]
 
